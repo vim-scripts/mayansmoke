@@ -68,7 +68,7 @@ hi Keyword      guifg=DodgerBlue        guibg=NONE      gui=NONE
 hi PreProc      guifg=blue1             guibg=NONE      gui=NONE
 hi Type         guifg=LightSlateBlue    guibg=NONE      gui=NONE
 hi Special      guifg=DarkOliveGreen4   guibg=NONE      gui=NONE
-hi Ignore       guifg=White             guibg=NONE      gui=NONE
+hi Ignore       guifg=bg                guibg=NONE      gui=NONE
 hi Error        guifg=Red               guibg=NONE      gui=underline
 hi Todo         guifg=tan4              guibg=NONE      gui=underline
 " }}}
@@ -82,6 +82,12 @@ hi VimCommentTitle  guifg=DarkSlateGray4 guibg=bg      gui=bold,italic
 " Syntax (QuickFix) {{{1
 " =============================================================================
 hi qfLineNr         guifg=black          guibg=green1      gui=bold
+" 1}}}
+
+" Syntax (Python) {{{1
+" =============================================================================
+hi pythonDecorator guifg=orange3 guibg=NONE gui=bold
+hi link pythonDecoratorFunction pythonDecorator
 " 1}}}
 
 "  Highlight Groups {{{1
