@@ -161,7 +161,13 @@ hi PmenuThumb   guifg=SkyBlue3          guibg=White             gui=reverse
 hi Question     guifg=Chartreuse4       guibg=bg                gui=bold
 hi SignColumn   guifg=LightSteelBlue4   guibg=#F5F5EE           gui=bold
 hi Search       guifg=white             guibg=red               gui=NONE
-hi SpecialKey   guifg=white             guibg=LemonChiffon3     gui=NONE
+if exists('g:mayansmoke_special_key_visibility') && g:mayansmoke_special_key_visibility >= 2
+    hi SpecialKey   guifg=black             guibg=NavajoWhite       gui=NONE
+elseif exists('g:mayansmoke_special_key_visibility') && g:mayansmoke_special_key_visibility == 0
+    hi SpecialKey   guifg=#cccccc           guibg=NONE              gui=NONE
+else
+    hi SpecialKey   guifg=white             guibg=ivory3            gui=NONE
+endif
 hi SpellBad     guisp=Firebrick2                                gui=undercurl
 hi SpellCap     guisp=Blue                                      gui=undercurl
 hi SpellLocal   guisp=DarkCyan                                  gui=undercurl
