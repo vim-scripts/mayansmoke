@@ -2,7 +2,7 @@
 "
 " File:        mayansmoke.vim
 " Description: Vim color scheme file
-" Maintainer:  Jeet Sukumaran
+" Maintainer:  Jeet Sukumaran (GUI colors); Clayton Parker (cterm colors)
 "
 " =============================================================================
 
@@ -18,7 +18,7 @@ let colors_name = "mayansmoke"
 
 "  Normal Color {{{1
 " =============================================================================
-hi Normal gui=NONE guifg=Black guibg=#F8F8EE
+hi Normal gui=NONE guifg=Black guibg=#F4F4E8
 " }}}
 
 "  Highlight Groups {{{1
@@ -67,9 +67,16 @@ hi Normal gui=NONE guifg=Black guibg=#F8F8EE
 "    WarningMsg      warning messages
 "    WildMenu        current match in 'wildmenu' completion
 hi Cursor       guifg=bg                guibg=fg                gui=NONE
-hi CursorColumn guifg=NONE              guibg=beige             gui=NONE
-hi CursorIM     guifg=bg                guibg=fg                gui=NONE
-hi CursorLine   guifg=NONE              guibg=beige             gui=NONE
+if exists('g:mayansmoke_cursor_line_visibility') && g:mayansmoke_cursor_line_visibility >= 2
+    hi CursorColumn guifg=NONE              guibg=NavajoWhite   gui=NONE
+    hi CursorLine   guifg=NONE              guibg=NavajoWhite   gui=NONE
+elseif exists('g:mayansmoke_cursor_line_visibility') && g:mayansmoke_cursor_line_visibility >= 1
+    hi CursorColumn guifg=NONE              guibg=white         gui=NONE
+    hi CursorLine   guifg=NONE              guibg=white         gui=NONE
+else
+    hi CursorColumn guifg=NONE              guibg=#FFFDD0       gui=NONE
+    hi CursorLine   guifg=NONE              guibg=#FFFDD0       gui=NONE
+endif
 hi CursorIM     guifg=bg                guibg=fg                gui=NONE
 hi lCursor      guifg=bg                guibg=fg                gui=NONE
 hi DiffAdd      guifg=NONE              guibg=SeaGreen1         gui=NONE
@@ -78,7 +85,7 @@ hi DiffDelete   guifg=NONE              guibg=LightCoral        gui=NONE
 hi DiffText     guifg=NONE              guibg=yellow            gui=NONE
 hi Directory    guifg=#1600FF           guibg=bg                gui=NONE
 hi ErrorMsg     guifg=Red2              guibg=NONE              gui=bold
-hi FoldColumn   guifg=LightSteelBlue4   guibg=#F8F8EE           gui=bold
+hi FoldColumn   guifg=LightSteelBlue4   guibg=#F4F4E8           gui=bold
 hi Folded       guifg=SteelBlue4        guibg=Gainsboro         gui=italic
 hi IncSearch    guifg=white             guibg=red               gui=bold
 hi LineNr       guifg=#FEFEFC           guibg=LightSteelBlue    gui=NONE
@@ -91,7 +98,7 @@ hi PmenuSbar    guifg=White             guibg=PowderBlue        gui=NONE
 hi PmenuSel     guifg=White             guibg=Black             gui=NONE
 hi PmenuThumb   guifg=SkyBlue3          guibg=White             gui=reverse
 hi Question     guifg=Chartreuse4       guibg=bg                gui=bold
-hi SignColumn   guifg=LightSteelBlue4   guibg=#F8F8EE           gui=bold
+hi SignColumn   guifg=LightSteelBlue4   guibg=#F4F4E8           gui=bold
 hi Search       guifg=white             guibg=red               gui=NONE
 if exists('g:mayansmoke_special_key_visibility') && g:mayansmoke_special_key_visibility >= 2
     hi SpecialKey   guifg=black             guibg=NavajoWhite       gui=NONE
@@ -209,3 +216,61 @@ hi link diffComment     Comment
 " 2}}}
 
 " 1}}}
+
+" 256-Color Terminal Colors, by Clayton Parker {{{1
+" =============================================================================
+hi Normal cterm=NONE ctermfg=16  ctermbg=255
+hi Comment      ctermfg=110
+hi Constant     ctermfg=214
+    hi String   ctermfg=30
+    hi Boolean  ctermfg=88
+hi Identifier   ctermfg=160
+hi Function     ctermfg=132
+hi Statement    ctermfg=21
+hi Keyword      ctermfg=45
+hi PreProc      ctermfg=27
+hi Type         ctermfg=147
+hi Special      ctermfg=64
+hi Ignore       ctermfg=255
+hi Error        ctermfg=196             ctermbg=255     term=none
+hi Todo         ctermfg=136             ctermbg=255     cterm=NONE
+hi VimError         ctermfg=160          ctermbg=16
+hi VimCommentTitle  ctermfg=110
+hi qfLineNr         ctermfg=16           ctermbg=46        cterm=NONE
+hi pythonDecorator ctermfg=208   ctermbg=255 cterm=NONE
+hi Cursor       ctermfg=255             ctermbg=16              cterm=NONE
+hi CursorColumn ctermfg=NONE            ctermbg=255             cterm=NONE
+hi CursorIM     ctermfg=255             ctermbg=16              cterm=NONE
+hi CursorLine   ctermfg=NONE            ctermbg=254             cterm=NONE
+hi lCursor      ctermfg=255             ctermbg=16              cterm=NONE
+hi DiffAdd      ctermfg=16              ctermbg=48              cterm=NONE
+hi DiffChange   ctermfg=16              ctermbg=153             cterm=NONE
+hi DiffDelete   ctermfg=16              ctermbg=203             cterm=NONE
+hi DiffText     ctermfg=16              ctermbg=226             cterm=NONE
+hi Directory    ctermfg=21              ctermbg=255             cterm=NONE
+hi ErrorMsg     ctermfg=160             ctermbg=NONE            cterm=NONE
+hi FoldColumn   ctermfg=24              ctermbg=252             cterm=NONE
+hi Folded       ctermfg=24              ctermbg=252             cterm=NONE
+hi IncSearch    ctermfg=255             ctermbg=160             cterm=NONE
+hi LineNr       ctermfg=253             ctermbg=110             cterm=NONE
+hi NonText      ctermfg=110             ctermbg=255             cterm=NONE
+hi Pmenu        ctermfg=fg              ctermbg=195             cterm=NONE
+hi PmenuSbar    ctermfg=255             ctermbg=153             cterm=NONE
+hi PmenuSel     ctermfg=255             ctermbg=21              cterm=NONE
+hi PmenuThumb   ctermfg=111             ctermbg=255             cterm=NONE
+hi SignColumn   ctermfg=110             ctermbg=254             cterm=NONE
+hi Search       ctermfg=255             ctermbg=160             cterm=NONE
+hi SpecialKey   ctermfg=255             ctermbg=144             cterm=NONE
+hi SpellBad     ctermfg=16              ctermbg=229             cterm=NONE
+hi SpellCap     ctermfg=16              ctermbg=231             cterm=NONE
+hi SpellLocal   ctermfg=16              ctermbg=231             cterm=NONE
+hi SpellRare    ctermfg=16              ctermbg=226             cterm=NONE
+hi StatusLine   ctermfg=255             ctermbg=24              cterm=NONE
+hi StatusLineNC ctermfg=253             ctermbg=110             cterm=NONE
+hi Title        ctermfg=75              ctermbg=255             cterm=NONE
+hi VertSplit    ctermfg=255             ctermbg=24              cterm=NONE
+hi Visual       ctermfg=255             ctermbg=153             cterm=NONE
+hi WildMenu     ctermfg=16              ctermbg=117             cterm=NONE
+
+" 1}}}
+
