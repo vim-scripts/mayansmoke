@@ -123,6 +123,63 @@ hi WarningMsg   guifg=Firebrick2        guibg=bg                gui=NONE
 hi WildMenu     guifg=Black             guibg=SkyBlue           gui=NONE
 " }}}
 
+" 256-Color Terminal Colors, by Clayton Parker {{{1
+" =============================================================================
+hi Normal cterm=NONE ctermfg=16  ctermbg=255
+hi Comment      ctermfg=110
+hi Constant     ctermfg=214
+    hi String   ctermfg=30
+    hi Boolean  ctermfg=88
+hi Identifier   ctermfg=160
+hi Function     ctermfg=132
+hi Statement    ctermfg=21
+hi Keyword      ctermfg=45
+hi PreProc      ctermfg=27
+hi Type         ctermfg=147
+hi Special      ctermfg=64
+hi Ignore       ctermfg=255
+hi Error        ctermfg=196             ctermbg=255     term=none
+hi Todo         ctermfg=136             ctermbg=255     cterm=NONE
+hi VimError         ctermfg=160          ctermbg=16
+hi VimCommentTitle  ctermfg=110
+hi qfLineNr         ctermfg=16           ctermbg=46        cterm=NONE
+hi pythonDecorator ctermfg=208   ctermbg=255 cterm=NONE
+hi Cursor       ctermfg=255             ctermbg=16              cterm=NONE
+hi CursorColumn ctermfg=NONE            ctermbg=255             cterm=NONE
+hi CursorIM     ctermfg=255             ctermbg=16              cterm=NONE
+hi CursorLine   ctermfg=NONE            ctermbg=254             cterm=NONE
+hi lCursor      ctermfg=255             ctermbg=16              cterm=NONE
+hi DiffAdd      ctermfg=16              ctermbg=48              cterm=NONE
+hi DiffChange   ctermfg=16              ctermbg=153             cterm=NONE
+hi DiffDelete   ctermfg=16              ctermbg=203             cterm=NONE
+hi DiffText     ctermfg=16              ctermbg=226             cterm=NONE
+hi Directory    ctermfg=21              ctermbg=255             cterm=NONE
+hi ErrorMsg     ctermfg=160             ctermbg=NONE            cterm=NONE
+hi FoldColumn   ctermfg=24              ctermbg=252             cterm=NONE
+hi Folded       ctermfg=24              ctermbg=252             cterm=NONE
+hi IncSearch    ctermfg=255             ctermbg=160             cterm=NONE
+hi LineNr       ctermfg=253             ctermbg=110             cterm=NONE
+hi NonText      ctermfg=110             ctermbg=255             cterm=NONE
+hi Pmenu        ctermfg=fg              ctermbg=195             cterm=NONE
+hi PmenuSbar    ctermfg=255             ctermbg=153             cterm=NONE
+hi PmenuSel     ctermfg=255             ctermbg=21              cterm=NONE
+hi PmenuThumb   ctermfg=111             ctermbg=255             cterm=NONE
+hi SignColumn   ctermfg=110             ctermbg=254             cterm=NONE
+hi Search       ctermfg=255             ctermbg=160             cterm=NONE
+hi SpecialKey   ctermfg=255             ctermbg=144             cterm=NONE
+hi SpellBad     ctermfg=16              ctermbg=229             cterm=NONE
+hi SpellCap     ctermfg=16              ctermbg=231             cterm=NONE
+hi SpellLocal   ctermfg=16              ctermbg=231             cterm=NONE
+hi SpellRare    ctermfg=16              ctermbg=226             cterm=NONE
+hi StatusLine   ctermfg=255             ctermbg=24              cterm=NONE
+hi StatusLineNC ctermfg=253             ctermbg=110             cterm=NONE
+hi Title        ctermfg=75              ctermbg=255             cterm=NONE
+hi VertSplit    ctermfg=255             ctermbg=24              cterm=NONE
+hi Visual       ctermfg=255             ctermbg=153             cterm=NONE
+hi WildMenu     ctermfg=16              ctermbg=117             cterm=NONE
+
+" 1}}}
+
 "  Syntax {{{1
 " =============================================================================
 
@@ -215,62 +272,37 @@ hi link diffSubname     diffLine
 hi link diffComment     Comment
 " 2}}}
 
-" 1}}}
-
-" 256-Color Terminal Colors, by Clayton Parker {{{1
-" =============================================================================
-hi Normal cterm=NONE ctermfg=16  ctermbg=255
-hi Comment      ctermfg=110
-hi Constant     ctermfg=214
-    hi String   ctermfg=30
-    hi Boolean  ctermfg=88
-hi Identifier   ctermfg=160
-hi Function     ctermfg=132
-hi Statement    ctermfg=21
-hi Keyword      ctermfg=45
-hi PreProc      ctermfg=27
-hi Type         ctermfg=147
-hi Special      ctermfg=64
-hi Ignore       ctermfg=255
-hi Error        ctermfg=196             ctermbg=255     term=none
-hi Todo         ctermfg=136             ctermbg=255     cterm=NONE
-hi VimError         ctermfg=160          ctermbg=16
-hi VimCommentTitle  ctermfg=110
-hi qfLineNr         ctermfg=16           ctermbg=46        cterm=NONE
-hi pythonDecorator ctermfg=208   ctermbg=255 cterm=NONE
-hi Cursor       ctermfg=255             ctermbg=16              cterm=NONE
-hi CursorColumn ctermfg=NONE            ctermbg=255             cterm=NONE
-hi CursorIM     ctermfg=255             ctermbg=16              cterm=NONE
-hi CursorLine   ctermfg=NONE            ctermbg=254             cterm=NONE
-hi lCursor      ctermfg=255             ctermbg=16              cterm=NONE
-hi DiffAdd      ctermfg=16              ctermbg=48              cterm=NONE
-hi DiffChange   ctermfg=16              ctermbg=153             cterm=NONE
-hi DiffDelete   ctermfg=16              ctermbg=203             cterm=NONE
-hi DiffText     ctermfg=16              ctermbg=226             cterm=NONE
-hi Directory    ctermfg=21              ctermbg=255             cterm=NONE
-hi ErrorMsg     ctermfg=160             ctermbg=NONE            cterm=NONE
-hi FoldColumn   ctermfg=24              ctermbg=252             cterm=NONE
-hi Folded       ctermfg=24              ctermbg=252             cterm=NONE
-hi IncSearch    ctermfg=255             ctermbg=160             cterm=NONE
-hi LineNr       ctermfg=253             ctermbg=110             cterm=NONE
-hi NonText      ctermfg=110             ctermbg=255             cterm=NONE
-hi Pmenu        ctermfg=fg              ctermbg=195             cterm=NONE
-hi PmenuSbar    ctermfg=255             ctermbg=153             cterm=NONE
-hi PmenuSel     ctermfg=255             ctermbg=21              cterm=NONE
-hi PmenuThumb   ctermfg=111             ctermbg=255             cterm=NONE
-hi SignColumn   ctermfg=110             ctermbg=254             cterm=NONE
-hi Search       ctermfg=255             ctermbg=160             cterm=NONE
-hi SpecialKey   ctermfg=255             ctermbg=144             cterm=NONE
-hi SpellBad     ctermfg=16              ctermbg=229             cterm=NONE
-hi SpellCap     ctermfg=16              ctermbg=231             cterm=NONE
-hi SpellLocal   ctermfg=16              ctermbg=231             cterm=NONE
-hi SpellRare    ctermfg=16              ctermbg=226             cterm=NONE
-hi StatusLine   ctermfg=255             ctermbg=24              cterm=NONE
-hi StatusLineNC ctermfg=253             ctermbg=110             cterm=NONE
-hi Title        ctermfg=75              ctermbg=255             cterm=NONE
-hi VertSplit    ctermfg=255             ctermbg=24              cterm=NONE
-hi Visual       ctermfg=255             ctermbg=153             cterm=NONE
-hi WildMenu     ctermfg=16              ctermbg=117             cterm=NONE
+" PHP (contributed by Ryan Kulla) {{{2
+" -----------------------------------------------------------------------------
+" Ryan Kulla's addition for PHP syntax highlighting (for regular/terminal vim)
+hi phpConditional ctermfg=21 cterm=NONE guifg=black
+hi phpIdentifier ctermfg=0 cterm=NONE guifg=black
+hi phpOperator ctermfg=black cterm=NONE guifg=black
+hi phpRegion ctermfg=132 cterm=NONE guifg=VioletRed4
+hi phpComparison ctermfg=black cterm=NONE guifg=black
+hi phpType ctermfg=darkgreen cterm=NONE guifg=darkgreen
+hi phpParent ctermfg=black cterm=NONE guifg=black
+hi phpMethodsVar ctermfg=132 cterm=NONE guifg=VioletRed4
+hi phpStatement ctermfg=21 cterm=NONE guifg=blue
+hi phpStorageClass ctermfg=21 cterm=NONE guifg=blue
+hi phpStringSingle ctermfg=30 cterm=NONE guifg=Aquamarine4
+hi phpStringDouble ctermfg=30 cterm=NONE guifg=Aquamarine4
+hi phpFunctions ctermfg=21 cterm=NONE guifg=blue
+hi phpSpecialFunction ctermfg=21 cterm=NONE guifg=blue
+hi phpRepeat ctermfg=21 cterm=NONE guifg=blue
+hi phpNumber ctermfg=214 cterm=bold guifg=brown
+hi phpTodo ctermfg=red cterm=bold guifg=red gui=bold
+hi phpDefine ctermfg=21 cterm=NONE guifg=blue
+hi phpConstant ctermfg=21 cterm=NONE guifg=black
+hi phpCoreConstant ctermfg=21 cterm=NONE guifg=black
+hi phpMemberSelector ctermfg=black cterm=NONE guifg=black
+hi phpLabel ctermfg=21 cterm=NONE guifg=blue
+hi phpStructure ctermfg=black cterm=NONE guifg=black
+hi phpRelation ctermfg=black cterm=NONE guifg=black
+hi phpEnvVar ctermfg=black cterm=NONE guifg=black
+hi phpIntVar ctermfg=0 cterm=bold guifg=black gui=bold
+hi phpBoolean ctermfg=58 cterm=NONE guifg=brown
+" 2}}}
 
 " 1}}}
 
