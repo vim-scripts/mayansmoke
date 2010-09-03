@@ -82,15 +82,15 @@ hi lCursor      guifg=bg                guibg=fg                gui=NONE
 hi DiffAdd      guifg=NONE              guibg=SeaGreen1         gui=NONE
 hi DiffChange   guifg=NONE              guibg=LightSkyBlue1     gui=NONE
 hi DiffDelete   guifg=NONE              guibg=LightCoral        gui=NONE
-hi DiffText     guifg=NONE              guibg=yellow            gui=NONE
+hi DiffText     guifg=black             guibg=LightCyan1        gui=NONE
 hi Directory    guifg=#1600FF           guibg=bg                gui=NONE
-hi ErrorMsg     guifg=Red2              guibg=NONE              gui=bold
+hi ErrorMsg     guifg=Red2              guibg=NONE              gui=NONE
 hi FoldColumn   guifg=LightSteelBlue4   guibg=#F4F4E8           gui=bold
 hi Folded       guifg=SteelBlue4        guibg=Gainsboro         gui=italic
-hi IncSearch    guifg=white             guibg=red               gui=bold
+hi IncSearch    guifg=black             guibg=yellow            gui=NONE
 hi LineNr       guifg=#FEFEFC           guibg=LightSteelBlue    gui=NONE
 hi MatchParen   guifg=White             guibg=MediumPurple1     gui=NONE
-hi ModeMsg      guifg=White             guibg=tomato            gui=bold
+hi ModeMsg      guifg=White             guibg=tomato1           gui=bold
 hi MoreMsg      guifg=SeaGreen4         guibg=bg                gui=bold
 hi NonText      guifg=LightSteelBlue4   guibg=bg                gui=bold
 hi Pmenu        guifg=Black             guibg=PaleTurquoise3    gui=NONE
@@ -99,7 +99,7 @@ hi PmenuSel     guifg=White             guibg=Black             gui=NONE
 hi PmenuThumb   guifg=SkyBlue3          guibg=White             gui=reverse
 hi Question     guifg=Chartreuse4       guibg=bg                gui=bold
 hi SignColumn   guifg=LightSteelBlue4   guibg=#F4F4E8           gui=bold
-hi Search       guifg=white             guibg=red               gui=NONE
+hi Search       guifg=black             guibg=yellow            gui=NONE
 if exists('g:mayansmoke_special_key_visibility') && g:mayansmoke_special_key_visibility >= 2
     hi SpecialKey   guifg=black             guibg=NavajoWhite       gui=NONE
 elseif exists('g:mayansmoke_special_key_visibility') && g:mayansmoke_special_key_visibility == 0
@@ -243,7 +243,14 @@ hi VimCommentTitle  guifg=DarkSlateGray4 guibg=bg      gui=bold,italic
 
 " QuickFix {{{2
 " -----------------------------------------------------------------------------
-hi qfLineNr         guifg=black          guibg=green1      gui=bold
+
+" syn match qfFileName  "^[^|]*" nextgroup=qfSeparator
+" syn match qfSeparator "|" nextgroup=qfLineNr contained
+" syn match qfLineNr    "[^|]*" contained contains=qfError
+" syn match qfError     "error" contained
+hi qfFileName  guifg=LightSkyBlue4     guibg=NONE      gui=italic
+hi qfLineNr    guifg=coral             guibg=NONE      gui=bold
+hi qfError     guifg=red               guibg=NONE      gui=bold
 " 2}}}
 
 " Python {{{2
