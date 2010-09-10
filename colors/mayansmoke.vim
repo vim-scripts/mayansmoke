@@ -67,7 +67,10 @@ hi Normal gui=NONE guifg=Black guibg=#F4F4E8
 "    WarningMsg      warning messages
 "    WildMenu        current match in 'wildmenu' completion
 hi Cursor       guifg=bg                guibg=fg                gui=NONE
-if exists('g:mayansmoke_cursor_line_visibility') && g:mayansmoke_cursor_line_visibility >= 2
+if hlexists('MayanSmokeCursorLine')
+    hi link CursorColumn MayanSmokeCursorLine
+    hi link CursorLine MayanSmokeCursorLine
+elseif exists('g:mayansmoke_cursor_line_visibility') && g:mayansmoke_cursor_line_visibility >= 2
     hi CursorColumn guifg=NONE              guibg=NavajoWhite   gui=NONE
     hi CursorLine   guifg=NONE              guibg=NavajoWhite   gui=NONE
 elseif exists('g:mayansmoke_cursor_line_visibility') && g:mayansmoke_cursor_line_visibility >= 1
@@ -87,7 +90,25 @@ hi Directory    guifg=#1600FF           guibg=bg                gui=NONE
 hi ErrorMsg     guifg=Red2              guibg=NONE              gui=NONE
 hi FoldColumn   guifg=LightSteelBlue4   guibg=#F4F4E8           gui=bold
 hi Folded       guifg=SteelBlue4        guibg=Gainsboro         gui=italic
-hi IncSearch    guifg=black             guibg=yellow            gui=NONE
+if hlexists('MayanSmokeSearch')
+    hi link IncSearch MayanSmokeSearch
+    hi link Search MayanSmokeSearch
+elseif exists('g:mayansmoke_search_visibility') && g:mayansmoke_search_visibility >= 4
+    hi IncSearch    guifg=white             guibg=red           gui=NONE
+    hi Search       guifg=white             guibg=red           gui=NONE
+elseif exists('g:mayansmoke_search_visibility') && g:mayansmoke_search_visibility == 3
+    hi IncSearch    guifg=black             guibg=gold       gui=NONE
+    hi Search       guifg=black             guibg=gold        gui=NONE
+elseif exists('g:mayansmoke_search_visibility') && g:mayansmoke_search_visibility == 2
+    hi IncSearch    guifg=white             guibg=darkorange       gui=NONE
+    hi Search       guifg=white             guibg=darkorange        gui=NONE
+elseif exists('g:mayansmoke_search_visibility') && g:mayansmoke_search_visibility == 0
+    hi IncSearch    guifg=black             guibg=tan         gui=NONE
+    hi Search       guifg=black             guibg=tan         gui=NONE
+else
+    hi IncSearch    guifg=black             guibg=khaki          gui=NONE
+    hi Search       guifg=black             guibg=khaki          gui=NONE
+endif
 hi LineNr       guifg=#FEFEFC           guibg=LightSteelBlue    gui=NONE
 hi MatchParen   guifg=White             guibg=MediumPurple1     gui=NONE
 hi ModeMsg      guifg=White             guibg=tomato1           gui=bold
@@ -99,8 +120,10 @@ hi PmenuSel     guifg=White             guibg=Black             gui=NONE
 hi PmenuThumb   guifg=SkyBlue3          guibg=White             gui=reverse
 hi Question     guifg=Chartreuse4       guibg=bg                gui=bold
 hi SignColumn   guifg=LightSteelBlue4   guibg=#F4F4E8           gui=bold
-hi Search       guifg=black             guibg=yellow            gui=NONE
-if exists('g:mayansmoke_special_key_visibility') && g:mayansmoke_special_key_visibility >= 2
+
+if hlexists('MayanSmokeSpecialKey')
+    hi link SpecialKey MayanSmokeSpecialKey
+elseif exists('g:mayansmoke_special_key_visibility') && g:mayansmoke_special_key_visibility >= 2
     hi SpecialKey   guifg=black             guibg=NavajoWhite       gui=NONE
 elseif exists('g:mayansmoke_special_key_visibility') && g:mayansmoke_special_key_visibility == 0
     hi SpecialKey   guifg=#cccccc           guibg=NONE              gui=NONE
