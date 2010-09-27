@@ -24,6 +24,7 @@ hi Normal gui=NONE guifg=Black guibg=#F4F4E8
 "  Highlight Groups {{{1
 " =============================================================================
 " Groups (see ':help highlight-groups'):
+"    ColorColumn     highlight to use with ':set colorcolumn'
 "    Cursor          the character under the cursor
 "    CursorIM        like Cursor, but used when in IME mode |CursorIM|
 "    CursorColumn    the screen column that the cursor is in when 'cursorcolumn' is set
@@ -66,6 +67,7 @@ hi Normal gui=NONE guifg=Black guibg=#F4F4E8
 "    VisualNOS       Visual mode selection when vim is "Not Owning the Selection".
 "    WarningMsg      warning messages
 "    WildMenu        current match in 'wildmenu' completion
+hi ColorColumn  guifg=NONE              guibg=#EEEEDD
 hi Cursor       guifg=bg                guibg=fg                gui=NONE
 if hlexists('MayanSmokeCursorLine')
     hi link CursorColumn MayanSmokeCursorLine
@@ -88,8 +90,8 @@ hi DiffDelete   guifg=NONE              guibg=LightCoral        gui=NONE
 hi DiffText     guifg=black             guibg=LightCyan1        gui=NONE
 hi Directory    guifg=#1600FF           guibg=bg                gui=NONE
 hi ErrorMsg     guifg=Red2              guibg=NONE              gui=NONE
-hi FoldColumn   guifg=LightSteelBlue4   guibg=#F4F4E8           gui=bold
-hi Folded       guifg=SteelBlue4        guibg=Gainsboro         gui=italic
+hi FoldColumn   guifg=SteelBlue4        guibg=LightYellow2      gui=bold
+hi Folded       guifg=SteelBlue4        guibg=Gainsboro      gui=italic
 if hlexists('MayanSmokeSearch')
     hi link IncSearch MayanSmokeSearch
     hi link Search MayanSmokeSearch
@@ -110,25 +112,26 @@ else
     hi Search       guifg=black             guibg=khaki          gui=NONE
 endif
 hi LineNr       guifg=#FEFEFC           guibg=LightSteelBlue    gui=NONE
-hi MatchParen   guifg=White             guibg=MediumPurple1     gui=NONE
+hi MatchParen   guifg=White             guibg=blue     gui=bold
 hi ModeMsg      guifg=White             guibg=tomato1           gui=bold
 hi MoreMsg      guifg=SeaGreen4         guibg=bg                gui=bold
-hi NonText      guifg=LightSteelBlue4   guibg=bg                gui=bold
-hi Pmenu        guifg=Black             guibg=PaleTurquoise3    gui=NONE
-hi PmenuSbar    guifg=White             guibg=PowderBlue        gui=NONE
-hi PmenuSel     guifg=White             guibg=Black             gui=NONE
-hi PmenuThumb   guifg=SkyBlue3          guibg=White             gui=reverse
-hi Question     guifg=Chartreuse4       guibg=bg                gui=bold
-hi SignColumn   guifg=LightSteelBlue4   guibg=#F4F4E8           gui=bold
+hi NonText      guifg=LightCyan3        guibg=bg                gui=bold
 
+hi Pmenu        guifg=Orange4           guibg=LightYellow3      gui=NONE
+hi PmenuSel     guifg=ivory2            guibg=NavajoWhite4      gui=bold
+hi PmenuSbar    guifg=White             guibg=#999666        gui=NONE
+hi PmenuThumb   guifg=White             guibg=#7B7939        gui=NONE
+
+hi Question     guifg=Chartreuse4       guibg=bg                gui=bold
+hi SignColumn   guifg=white             guibg=LightYellow3      gui=NONE
 if hlexists('MayanSmokeSpecialKey')
     hi link SpecialKey MayanSmokeSpecialKey
 elseif exists('g:mayansmoke_special_key_visibility') && g:mayansmoke_special_key_visibility >= 2
-    hi SpecialKey   guifg=black             guibg=NavajoWhite       gui=NONE
+    hi SpecialKey   guifg=black         guibg=NavajoWhite       gui=NONE
 elseif exists('g:mayansmoke_special_key_visibility') && g:mayansmoke_special_key_visibility == 0
-    hi SpecialKey   guifg=#cccccc           guibg=NONE              gui=NONE
+    hi SpecialKey   guifg=bisque3       guibg=NONE              gui=NONE
 else
-    hi SpecialKey   guifg=white             guibg=ivory3            gui=NONE
+    hi SpecialKey   guifg=white         guibg=ivory3            gui=NONE
 endif
 hi SpellBad     guisp=Firebrick2                                gui=undercurl
 hi SpellCap     guisp=Blue                                      gui=undercurl
