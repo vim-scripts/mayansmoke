@@ -111,8 +111,8 @@ else
     hi IncSearch    guifg=black             guibg=khaki          gui=NONE
     hi Search       guifg=black             guibg=khaki          gui=NONE
 endif
-hi LineNr       guifg=#FEFEFC           guibg=LightSteelBlue    gui=NONE
-hi MatchParen   guifg=White             guibg=blue     gui=bold
+hi LineNr       guifg=#666677           guibg=#cccfbf    gui=NONE
+hi MatchParen   guifg=black             guibg=LemonChiffon3     gui=bold
 hi ModeMsg      guifg=White             guibg=tomato1           gui=bold
 hi MoreMsg      guifg=SeaGreen4         guibg=bg                gui=bold
 hi NonText      guifg=LightCyan3        guibg=bg                gui=bold
@@ -137,13 +137,14 @@ hi SpellBad     guisp=Firebrick2                                gui=undercurl
 hi SpellCap     guisp=Blue                                      gui=undercurl
 hi SpellLocal   guisp=DarkCyan                                  gui=undercurl
 hi SpellRare    guisp=Magenta                                   gui=undercurl
-hi StatusLine   guifg=white             guibg=LightSkyBlue4     gui=NONE
-hi StatusLineNC guifg=ivory1            guibg=LightSteelBlue    gui=NONE
+hi StatusLine   guifg=#FFFEEE           guibg=#557788     gui=NONE
+" hi StatusLineNC guifg=#EAE6E2           guibg=LightSteelBlue3    gui=italic
+hi StatusLineNC guifg=#F4F4EE           guibg=#99aabb    gui=italic
 hi TabLine      guifg=fg                guibg=LightGrey         gui=underline
 hi TabLineFill  guifg=fg                guibg=bg                gui=reverse
 hi TabLineSel   guifg=fg                guibg=bg                gui=bold
 hi Title        guifg=DeepSkyBlue3      guibg=bg                gui=bold
-hi VertSplit    guifg=ivory1            guibg=LightSkyBlue4     gui=NONE
+hi VertSplit    guifg=#99aabb     guibg=#99aabb
 hi Visual       guifg=white             guibg=DeepSkyBlue1      gui=NONE
 hi WarningMsg   guifg=Firebrick2        guibg=bg                gui=NONE
 hi WildMenu     guifg=Black             guibg=SkyBlue           gui=NONE
@@ -245,7 +246,8 @@ hi WildMenu     ctermfg=16              ctermbg=117             cterm=NONE
 "       Debug          debugging statements
 "   *Error          any erroneous construct
 "   *Todo           anything that needs extra attention
-hi Comment      guifg=SlateGray3        guibg=NONE      gui=italic
+" hi Comment      guifg=#A2B5CD         guibg=NONE      gui=italic
+hi Comment      guifg=#96AAC2         guibg=NONE      gui=italic
 hi Constant     guifg=DarkOrange        guibg=NONE      gui=NONE
     hi String   guifg=Aquamarine4       guibg=NONE      gui=NONE
     hi Boolean  guifg=IndianRed4        guibg=NONE      gui=NONE
